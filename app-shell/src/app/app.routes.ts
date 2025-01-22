@@ -5,7 +5,7 @@ import { GlobalContextService } from './shared/services/global-context.service';
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     loadComponent: () =>
       loadRemoteModule('app-myacme-home', './home').then(
         (m) => m.HomeComponent
@@ -16,12 +16,17 @@ export const routes: Routes = [
   },
   {
     path: 'claims',
-    loadComponent: () =>
-      loadRemoteModule('app-myacme-claims', './Component').then(
-        (m) => m.ClaimsComponent
+    loadChildren: () =>
+      loadRemoteModule('app-myacme-claims', './Module').then(
+        (m) => m.ClaimsModule
       ),
     resolve: {
       context: () => inject(GlobalContextService).getContext(),
     },
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
   },
 ];

@@ -1,14 +1,276 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full bg-gray-100">
   <head>
     <meta charset="utf-8" />
-    <title>AppShell</title>
+    <title>My Acme</title>
     <base href="/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light" />
+
+    <!-- Icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/manifest.json" />
+
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          colors: {
+            white: "#FFFFFF",
+            black: "#000000",
+            gray: {
+              900: "#143757",
+              800: "#153B5E",
+              700: "#294E70",
+              600: "#476785",
+              500: "#668099",
+              400: "#91A6BA",
+              300: "#C8D4DF",
+              200: "#E2E8EE",
+              100: "#EFF2F6",
+              50: "#F9FAFC",
+            },
+            red: {
+              900: "#7F1D1D",
+              800: "#991B1B",
+              700: "#B91C1C",
+              600: "#DC2626",
+              500: "#EF4444",
+              400: "#F87171",
+              300: "#FCA5A5",
+              200: "#FECACA",
+              100: "#FEE2E2",
+              50: "#FEF2F2",
+            },
+            orange: {
+              900: "#C75000",
+              800: "#D25704",
+              700: "#DF5D07",
+              600: "#E9640C",
+              500: "#F48106",
+              400: "#F89627",
+              300: "#FDBC72",
+              200: "#FED6A9",
+              100: "#FFECD6",
+              50: "#FFF5EB",
+            },
+            yellow: {
+              900: "#78350F",
+              800: "#92400E",
+              700: "#B45309",
+              600: "#D97706",
+              500: "#F59E0B",
+              400: "#FBBF24",
+              300: "#FCD34D",
+              200: "#FDE68A",
+              100: "#FEF3C7",
+              50: "#FFFBEB",
+            },
+            green: {
+              900: "#064E3B",
+              800: "#065F46",
+              700: "#047857",
+              600: "#059669",
+              500: "#10B981",
+              400: "#34D399",
+              300: "#6EE7B7",
+              200: "#A7F3D0",
+              100: "#D1FAE5",
+              50: "#ECFDF5",
+            },
+            teal: {
+              900: "#134E4A",
+              800: "#115E59",
+              700: "#0F766E",
+              600: "#0D9488",
+              500: "#14B8A6",
+              400: "#2DD4BF",
+              300: "#5EEAD4",
+              200: "#99F6E4",
+              100: "#CCFBF1",
+              50: "#F0FDFA",
+            },
+            cyan: {
+              900: "#164E63",
+              800: "#155E75",
+              700: "#0E7490",
+              600: "#0891B2",
+              500: "#06B6D4",
+              400: "#22D3EE",
+              300: "#67E8F9",
+              200: "#A5F3FC",
+              100: "#CFFAFE",
+              50: "#ECFEFF",
+            },
+            "light-blue": {
+              900: "#0C4E6E",
+              800: "#075A83",
+              700: "#0070A9",
+              600: "#0291C5",
+              500: "#01A7E1",
+              400: "#3AC5F8",
+              300: "#7EDAFC",
+              200: "#BAE6FD",
+              100: "#E0F2FE",
+              50: "#F0F9FF",
+            },
+            blue: {
+              900: "#1E3A8A",
+              800: "#1E40AF",
+              700: "#1D4ED8",
+              600: "#2563EB",
+              500: "#3B82F6",
+              400: "#60A5FA",
+              300: "#93C5FD",
+              200: "#BFDBFE",
+              100: "#DBEAFE",
+              50: "#EFF6FF",
+            },
+            indigo: {
+              900: "#312E81",
+              800: "#3730A3",
+              700: "#4338CA",
+              600: "#4F46E5",
+              500: "#6366F1",
+              400: "#818CF8",
+              300: "#A5B4FC",
+              200: "#C7D2FE",
+              100: "#E0E7FF",
+              50: "#EEF2FF",
+            },
+            purple: {
+              900: "#4C1D95",
+              800: "#5B21B6",
+              700: "#6D28D9",
+              600: "#7C3AED",
+              500: "#8B5CF6",
+              400: "#A78BFA",
+              300: "#C4B5FD",
+              200: "#DDD6FE",
+              100: "#EDE9FE",
+              50: "#F5F3FF",
+            },
+            pink: {
+              900: "#831843",
+              800: "#9D174D",
+              700: "#BE185D",
+              600: "#DB2777",
+              500: "#EC4899",
+              400: "#F472B6",
+              300: "#F9A8D4",
+              200: "#FBCFE8",
+              100: "#FCE7F3",
+              50: "#FDF2F8",
+            },
+            rose: {
+              900: "#881337",
+              800: "#9F1239",
+              700: "#BE123C",
+              600: "#E11D48",
+              500: "#F43F5E",
+              400: "#FB7185",
+              300: "#FDA4AF",
+              200: "#FECDD3",
+              100: "#FFE4E6",
+              50: "#FFF1F2",
+            },
+          },
+          extend: {
+            fontFamily: {
+              sans: ["Proxima Nova", "Helvetica", "Arial", "sans-serif"],
+            },
+            minWidth: {
+              20: "80px",
+            },
+            minHeight: {
+              "1/10": "10%",
+              "9/10": "90%",
+              "1/20": "5%",
+              "9/20": "45%",
+              "11/20": "55%",
+              "19/20": "95%",
+              110: "110px",
+            },
+            height: {
+              "web-input": "38px",
+              "mobile-input": "42px",
+            },
+          },
+          boxShadow: {
+            sm: "0px 1px 2px rgba(101, 153, 202, 0.27)",
+            DEFAULT:
+              "0px 1px 5px rgba(98, 151, 202, 0.13), 0px 3px 34px rgba(110, 155, 198, 0.04)",
+            md: "1px 4px 10px rgba(123, 170, 215, 0.1), 5px 3px 17px rgba(159, 192, 222, 0.1)",
+            lg: "0px 4px 6pxx rgba(115, 160, 201, 0), 7px 15px 24px rgba(97, 141, 182, 0.11)",
+            xl: "0px 10px 10px rgba(155, 181, 206, 0.28), 0px 20px 25px rgba(220, 234, 243, 0.38)",
+            "2xl": "0px 25px 50px rgba(103, 152, 199, 0.22)",
+            custom:
+              "0px 3px 34px rgba(110, 155, 198, .04), 0px 1px 5px rgba(95, 151, 202, .13)",
+          },
+        },
+      };
+    </script>
   </head>
-  <body>
+
+  <body class="min-h-screen bg-gray-100 text-gray-800 antialiased">
     <app-root></app-root>
+
+    <noscript>
+      <div class="no-script-wrapper">
+        <section class="no-script-top-bar">
+          <img
+            src="/assets/images/acme_logo.svg"
+            alt="Acme logo"
+            class="no-script-top-bar-logo"
+          />
+        </section>
+        <section class="no-script-content">
+          <h1 class="no-script-content-title">JavaScript Required</h1>
+          <p class="no-script-content-msg">
+            We're sorry, but My Acme requires JavaScript to function properly.
+            Please enable JavaScript in your browser settings to continue.
+          </p>
+          <a
+            class="no-script-button"
+            href="https://enable-javascript.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            How to enable JavaScript
+          </a>
+        </section>
+      </div>
+    </noscript>
   </body>
 </html>

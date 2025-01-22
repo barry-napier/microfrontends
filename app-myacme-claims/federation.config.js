@@ -7,7 +7,7 @@ module.exports = withNativeFederation({
   name: "app-myacme-claims",
 
   exposes: {
-    "./Component": "./src/app/claims/claims/claims.component.ts",
+    "./Module": "./src/app/claims/claims.module.ts",
   },
 
   shared: {

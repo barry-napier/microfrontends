@@ -1,8 +1,105 @@
-body {
-  margin: 0;
-  padding: 0;
+/* ProximaNova Font Family */
+@font-face {
+  font-family: "ProximaNova";
+  src: url("/assets/fonts/ProximaNova/proximanova-regular-webfont.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-main {
-  border: 4px solid red;
+@font-face {
+  font-family: "ProximaNova";
+  src: url("/assets/fonts/ProximaNova/proximanova-semibold-webfont.woff")
+    format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url("/assets/fonts/ProximaNova/proximanova-bold-webfont.woff")
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url("/assets/fonts/ProximaNova/proximanova-extrabold-webfont.woff")
+    format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url("/assets/fonts/ProximaNova/proximanova-light-webfont.woff")
+    format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Helvetica Neue Font Family */
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("/assets/fonts/helveticaneue/HelveticaNeue.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("/assets/fonts/helveticaneue/HelveticaNeueMed.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("/assets/fonts/helveticaneue/HelveticaNeueBold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("/assets/fonts/helveticaneue/HelveticaNeueThin.ttf")
+    format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("/assets/fonts/helveticaneue/HelveticaNeueLight.ttf")
+    format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("/assets/fonts/helveticaneue/HelveticaNeueIt.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Set default font family */
+body {
+  font-family: "ProximaNova", "HelveticaNeue", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", sans-serif;
 }

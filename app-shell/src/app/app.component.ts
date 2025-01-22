@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink } from '@angular/router';
 import { GlobalContextService } from './shared/services/global-context.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, RouterLink, CommonModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
@@ -18,5 +19,11 @@ export class AppComponent {
       email: 'john@example.com',
       roles: ['user', 'admin'],
     });
+  }
+
+  get isHomeRoute() {
+    return (
+      window.location.pathname === '/home' || window.location.pathname === '/'
+    );
   }
 }
