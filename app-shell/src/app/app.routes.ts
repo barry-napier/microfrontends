@@ -14,4 +14,14 @@ export const routes: Routes = [
       context: () => inject(GlobalContextService).getContext(),
     },
   },
+  {
+    path: 'claims',
+    loadComponent: () =>
+      loadRemoteModule('app-myacme-claims', './Component').then(
+        (m) => m.ClaimsComponent
+      ),
+    resolve: {
+      context: () => inject(GlobalContextService).getContext(),
+    },
+  },
 ];

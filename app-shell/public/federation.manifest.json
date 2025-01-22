@@ -1,3 +1,4 @@
 {
-  "app-myacme-home": "http://localhost:4201/remoteEntry.json"
+  "app-myacme-home": "http://localhost:4201/remoteEntry.json",
+  "app-myacme-claims": "http://localhost:4202/remoteEntry.json"
 }
