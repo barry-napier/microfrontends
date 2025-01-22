@@ -1,0 +1,27 @@
+<div class="claims-container">
+  <h2>Claims Summary</h2>
+
+  <div class="claims-grid">
+    <div
+      *ngFor="let claim of claims"
+      class="claim-card"
+      (click)="viewClaimDetails(claim.id)"
+    >
+      <div class="claim-header">
+        <span class="claim-number">{{ claim.claimNumber }}</span>
+        <span class="claim-status" [ngClass]="getStatusClass(claim.status)">{{
+          claim.status
+        }}</span>
+      </div>
+
+      <div class="claim-body">
+        <div class="claim-type">{{ claim.type }}</div>
+        <div class="claim-description">{{ claim.description }}</div>
+        <div class="claim-amount">${{ claim.amount.toFixed(2) }}</div>
+        <div class="claim-date">
+          Submitted: {{ claim.dateSubmitted | date : "mediumDate" }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

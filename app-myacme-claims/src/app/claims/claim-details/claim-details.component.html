@@ -1,0 +1,45 @@
+<div class="claim-details-container" *ngIf="claim">
+  <div class="claim-card">
+    <div class="claim-header">
+      <h2>Claim Details</h2>
+      <span class="claim-status" [ngClass]="getStatusClass(claim.status)">{{
+        claim.status
+      }}</span>
+    </div>
+
+    <div class="claim-info">
+      <div class="info-row">
+        <div class="info-label">Claim Number</div>
+        <div class="info-value">{{ claim.claimNumber }}</div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-label">Type</div>
+        <div class="info-value">{{ claim.type }}</div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-label">Description</div>
+        <div class="info-value">{{ claim.description }}</div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-label">Amount</div>
+        <div class="info-value amount">${{ claim.amount.toFixed(2) }}</div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-label">Submitted Date</div>
+        <div class="info-value">
+          {{ claim.dateSubmitted | date : "mediumDate" }}
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="back-button" (click)="goBack()">Back to Claims</button>
+    </div>
+  </div>
+</div>
+
+<div class="loading" *ngIf="!claim">Loading claim details...</div>
