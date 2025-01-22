@@ -18,8 +18,5 @@ export class AppComponent {
       email: 'john@example.com',
       roles: ['user', 'admin'],
     });
-
-    this.contextService.setFeature('darkMode', true);
-    this.contextService.setFeature('betaFeatures', true);
   }
 }

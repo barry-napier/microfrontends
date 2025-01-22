@@ -23,10 +23,7 @@ export class GlobalContextService {
   private readonly defaultConfig: AppConfig = {
     version: '1.0.0',
     environment: 'development',
-    features: {
-      darkMode: false,
-      betaFeatures: false,
-    },
+    features: {},
   };
 
   private readonly context = signal<GlobalContext>({
