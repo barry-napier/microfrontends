@@ -13,3 +13,23 @@ p {
   color: #666;
   line-height: 1.6;
 }
+
+.user-info {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.user-info p {
+  margin: 0.5rem 0;
+}
+
+.email {
+  color: #0066cc;
+}
+
+.roles {
+  font-size: 0.9rem;
+  color: #6c757d;
+}

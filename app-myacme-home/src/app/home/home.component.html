@@ -1,4 +1,31 @@
 <div class="home-container">
-  <h1 class="text-4xl">Welcome to MyAcme</h1>
+  <h1>Welcome to MyAcme</h1>
+  @if (userInfo()) {
+  <div class="user-info">
+    <p>Welcome back, {{ userInfo()?.name }}!</p>
+    <p class="email">{{ userInfo()?.email }}</p>
+    <p class="roles">Roles: {{ userInfo()?.roles?.join(", ") }}</p>
+    @if (userInfo()?.preferences) {
+    <p class="preferences">
+      Theme: {{ userInfo()?.preferences?.theme || "default" }} | Language:
+      {{ userInfo()?.preferences?.language || "default" }}
+    </p>
+    }
+  </div>
+  } @if (config()) {
+  <div class="app-info">
+    <p>Version: {{ config()?.version }}</p>
+    <p>Environment: {{ config()?.environment }}</p>
+    <p>Features:</p>
+    <ul>
+      @for (feature of getFeatures(config()?.features); track feature) {
+      <li>
+        {{ feature.name }}: {{ feature.enabled ? "Enabled" : "Disabled" }}
+      </li>
+      }
+    </ul>
+  </div>
+  }
+
   <p>This is your home page content.</p>
 </div>
